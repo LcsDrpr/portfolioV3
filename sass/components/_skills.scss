@@ -1,0 +1,84 @@
+.skills{
+    //float:left;
+    @include start-state;
+    min-width:200px;
+    height:280px;
+    margin-left:3%;
+    display:flex;
+    position:relative;
+    &:after{
+        content:'';
+        background:url('../img/arrow-icon.svg') no-repeat;
+        position:absolute;
+        height:23px;
+        width:14px;
+        clear:both;
+        display:block;
+        right:12px;
+        top:50%;
+        opacity:1;
+        @include transition-standard;
+    }
+    .colored-column{
+        width:60px;
+        background-color: $color-blue-green-primary;
+        display:inline-block;
+        svg{
+            width:43px;
+            height:43px;
+        }
+    }
+    .infos{
+        h2{
+            color:$color-blue-green-primary;
+            &:before{
+                background: -webkit-linear-gradient(-45deg, $color-blue-green-primary 0%,$color-white 100%);
+            }
+        }
+        .section-content{
+            display:flex;
+            .section-left{
+                position:relative;
+                width:80%;
+                @include transition-standard;
+                &:after{
+                    content:'';
+                    display:block;
+                    position:absolute;
+                    right:0;
+                    top:8%;
+                    //transform: translateY(-50%);
+                    height:70%;
+                    width:3px;
+                    background:$color-gray;
+                }
+                >div{
+                    margin-top:15px;
+                }
+            }
+            .section-right{
+                background:blue;
+                width:0%;
+                height:100%;
+                opacity:0;
+                @include transition-standard;
+            }
+        }
+    }
+
+    &:hover{
+        &:after{
+            opacity:0;
+        }
+        .section-content{
+            .section-left{
+                width:40%;
+            }
+            .section-right{
+                width:60%;
+                opacity:1;
+            }
+
+        }
+    }
+}
