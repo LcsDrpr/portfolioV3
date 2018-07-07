@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Landing page portfolio",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "compile:sass": "node-sass dist/sass/global.scss dist/css/global.css -w",
     "start": "node server.js"
