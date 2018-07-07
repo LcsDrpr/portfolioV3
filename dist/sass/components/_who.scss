@@ -1,0 +1,158 @@
+.who{
+    //float:left;
+    //width:45%;
+    //width:530px;
+    //height:330px;
+    //width:404px;
+    padding:20px 30px 20px 30px;
+    width:calc(50% - 20px);
+    height:204px;
+    @include start-state;
+    flex-direction: column;
+    &:hover{
+        h2{
+            color:$color-black!important;
+        }
+    }
+    .up{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        height:calc(100% - 50px);
+        .profil-pic{
+            width:80px;
+            height:80px;
+            border-radius: 100%;
+            background:red;
+        }
+        .name{
+            width:150px;
+            h2{
+                font-size:35px;
+                text-align:right;
+            }
+        }
+    }
+    .down{
+        display:flex;
+        justify-content: space-between;
+        .birth-date{
+            display:flex;
+            width:156px;
+            height:50px;
+            border-radius:10px;
+            background:$color-white;
+            @include shadow-standard;
+            @include transition-standard;
+            &:hover{
+                @include shadow-hover;
+                .svg-container{
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    width:40px;
+                    background:$color-orange-dark;
+                    svg path{
+                        fill:$color-white;
+                    }
+                }
+                .date-container{
+                    opacity:1;
+                    width:auto;
+                }
+            }
+            .svg-container{
+                position: relative;
+                height:100%;
+                width:100%;
+                @include transition-standard;
+                svg{
+                    @include transition-standard;
+                    fill:$color-orange-dark;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+
+                    path{
+                        @include transition-standard;
+                    }
+                }
+            }
+            .date-container{
+                @include transition-standard;
+                width:0px;
+                opacity:0;
+                flex:1;
+                padding-left:10px;
+                overflow: hidden;
+                position:relative;
+
+                p{
+                    position:absolute;
+                    top:50%;
+                    transform:translateY(-50%);
+                    text-transform: uppercase;
+                    font-family:$robotoMedium;
+                }
+            }
+        }
+        .location{
+            display:flex;
+            width:156px;
+            height:50px;
+            border-radius:10px;
+            background:$color-white;
+            @include shadow-standard;
+            @include transition-standard;
+
+            &:hover{
+                @include shadow-hover;
+
+                .svg-container{
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    width:40px;
+                    background:$color-orange-dark;
+                    svg path{
+                        fill:$color-white;
+                    }
+                }
+                .city-container{
+                    opacity:1;
+                    width:auto;
+                }
+            }
+            .svg-container{
+                position: relative;
+                height:100%;
+                width:100%;
+                @include transition-standard;
+                svg{
+                    @include transition-standard;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                    path{
+                        @include transition-standard;
+                    }
+                }
+            }
+            .city-container{
+                @include transition-standard;
+                width:0px;
+                opacity:0;
+                flex:1;
+                padding-left:10px;
+                overflow: hidden;
+                position:relative;
+
+                p{
+                    position:absolute;
+                    top:50%;
+                    transform:translateY(-50%);
+                    text-transform: uppercase;
+                    font-family:$robotoMedium;
+                }
+            }
+        }
+    }
+}

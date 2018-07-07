@@ -1,0 +1,34 @@
+//SHADOWS
+@mixin shadow-standard{
+    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+}
+
+@mixin shadow-hover{
+    box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+}
+ 
+//SPEAD
+@mixin transition-standard{
+    transition: all .4s ease;
+}
+
+//STATE
+@mixin start-state{
+    opacity:0;
+    //height:0;
+    display:none;
+}
+
+@mixin end-state{
+    //height:$height;
+    opacity:1;
+    display:block;
+}
+
+@mixin showCard($animation-name, $delay){
+    animation-name: $animation-name;
+    animation-delay:$delay;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
