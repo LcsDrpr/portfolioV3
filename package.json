@@ -4,7 +4,8 @@
   "description": "Landing page portfolio",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/global.scss css/global.css -w"
+    "compile:sass": "node-sass dist/sass/global.scss dist/css/global.css -w",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
