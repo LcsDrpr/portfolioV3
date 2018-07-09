@@ -1,5 +1,3 @@
-import { clearTimeout } from "timers";
-
 //alert('WESH !');
 
 $('document').ready(function() {
@@ -13,7 +11,6 @@ $('document').ready(function() {
         window.location = adress;
     }
     //setTimeout(Redirect(), 5000);
-    
    
     if( window.location == home){
         setTimeout(redirect, 5000);
