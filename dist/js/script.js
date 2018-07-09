@@ -12,7 +12,7 @@ $('document').ready(function() {
     }
     //setTimeout(Redirect(), 5000);
    
-    if( window.location == home){
+    if( window.location === home){
         setTimeout(redirect, 5000);
     }else{
         clearTimeout(redirect);
