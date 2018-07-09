@@ -10,7 +10,7 @@ $('document').ready(function() {
 
 
     console.log(window.location.pathname);
-    //var adress = "/curriculum";
+    var adress = "/curriculum";
     var home = "/";
 
     var redirect = function Redirect() {
