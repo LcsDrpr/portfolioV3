@@ -96,4 +96,10 @@
             }
         }
     }
+
+    &.open{
+        .colored-column{
+            width:0;
+        }
+    }
 }

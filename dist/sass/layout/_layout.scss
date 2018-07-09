@@ -59,7 +59,23 @@ a{
                         opacity:1!important;
                     }
                 }
+            }
+            &.open{
+                @include shadow-hover;
+                .colored-column{
+                    width:0;
 
+                    svg{
+                        width:0;
+                    }
+                }
+                h2{
+                    color:$color-white;
+                    &:before{
+                        width:100%!important;
+                        opacity:1!important;
+                    }
+                }
             }
             .infos{
                 width:140px;
