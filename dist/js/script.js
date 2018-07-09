@@ -14,7 +14,7 @@ $('document').ready(function() {
     }
     //setTimeout(Redirect(), 5000);
    
-    if( body.ireland){
+    if($('body').hasClass('ireland')){
         setTimeout(redirect, 5000);
     }else{
         clearTimeout(redirect);
