@@ -1,3 +1,5 @@
+import { clearTimeout } from "timers";
+
 //alert('WESH !');
 
 $('document').ready(function() {
@@ -12,12 +14,13 @@ $('document').ready(function() {
     }
     //setTimeout(Redirect(), 5000);
     
-    var blop = true;
-    if( blop == true){
+   
+    if( window.location == home){
         setTimeout(redirect, 5000);
-        blop = false;
+    }else{
+        clearTimeout(redirect);
     }
-    console.log('blop : '+ blop);
+    
 });
 
 
