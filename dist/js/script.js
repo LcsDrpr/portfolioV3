@@ -4,7 +4,7 @@ $('document').ready(function() {
     console.log( "ready!" );
     console.log(window.location);
 
-    var adress = "curriculum";
+    var adress = "/curriculum";
 
     var redirect = function Redirect() {
         window.location = adress;
