@@ -2,6 +2,7 @@
 
 $('document').ready(function() {
     console.log( "ready!" );
+    console.log(window.location);
 
     var adress = "/cv";
 
@@ -10,9 +11,9 @@ $('document').ready(function() {
     }
     //setTimeout(Redirect(), 5000);
     
-    if( window.location != adress){
+    /*if( window.location != adress){
         setTimeout(redirect, 5000);
-    }
+    }*/
 });
 
 
