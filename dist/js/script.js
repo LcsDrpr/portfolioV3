@@ -5,13 +5,13 @@ $('document').ready(function() {
 
     var adress = "/cv";
 
-    function Redirect() {
+    var redirect = function Redirect() {
         window.location = adress;
     }
     //setTimeout(Redirect(), 5000);
     
     if( window.location != adress){
-        setTimeout(Redirect, 5000);
+        setTimeout(redirect, 5000);
     }
 });
 
