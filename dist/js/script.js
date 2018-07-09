@@ -1,12 +1,20 @@
+//alert('WESH !');
 
-var adress = "index.html";
-function Redirect() {
-    window.location="index.html";
-}
+$('document').ready(function() {
+    console.log( "ready!" );
 
-if( window.location != adress){
-    setTimeout('Redirect()', 5000);
-}
+    var adress = "/cv";
+
+    function Redirect() {
+        window.location = adress;
+    }
+    //setTimeout(Redirect(), 5000);
+    
+    if( window.location != adress){
+        setTimeout(Redirect(), 5000);
+    }
+});
+
 
 
 
