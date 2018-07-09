@@ -11,7 +11,7 @@ $('document').ready(function() {
     //setTimeout(Redirect(), 5000);
     
     if( window.location != adress){
-        setTimeout('Redirect()', 5000);
+        setTimeout(Redirect, 5000);
     }
 });
 
