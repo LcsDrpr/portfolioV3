@@ -13,7 +13,7 @@ $('document').ready(function() {
     //setTimeout(Redirect(), 5000);
     
     var blop = '';
-    if( blop < 2){
+    if( blop >= 1){
         setTimeout(redirect, 5000);
         blop ++;
     }
