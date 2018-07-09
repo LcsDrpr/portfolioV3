@@ -12,12 +12,12 @@ $('document').ready(function() {
     }
     //setTimeout(Redirect(), 5000);
     
-    var blop = '';
-    if( blop <= 1){
+    var blop = true;
+    if( blop == true){
         setTimeout(redirect, 5000);
-        blop ++;
+        blop = false;
     }
-    console.log('blop'+ blop);
+    console.log('blop : '+ blop);
 });
 
 
