@@ -4,6 +4,8 @@ $('document').ready(function() {
     console.log( "ready!" );
     console.log(window.location);
 
+    console.log(window.location.pathname);
+
     var adress = "/curriculum";
     var home = "/";
 
@@ -12,7 +14,7 @@ $('document').ready(function() {
     }
     //setTimeout(Redirect(), 5000);
    
-    if( window.location === home){
+    if( body.ireland){
         setTimeout(redirect, 5000);
     }else{
         clearTimeout(redirect);
