@@ -5,15 +5,19 @@ $('document').ready(function() {
     console.log(window.location);
 
     var adress = "/curriculum";
+    var home = "/";
 
     var redirect = function Redirect() {
         window.location = adress;
     }
     //setTimeout(Redirect(), 5000);
     
-    if( window.location != adress){
+    var blop = '';
+    if( blop < 2){
         setTimeout(redirect, 5000);
+        blop ++;
     }
+    console.log('blop'+ blop);
 });
 
 
