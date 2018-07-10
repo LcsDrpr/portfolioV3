@@ -21,11 +21,11 @@ $('document').ready(function() {
     //setTimeout(Redirect(), 5000);
    
     //if($('body').hasClass('ireland')){
-    if(window.location.pathname != '/curriculum'){
+    /*if(window.location.pathname != '/curriculum'){
         setTimeout(redirect, 5000);
     }else{
         clearTimeout(redirect);
-    }
+    }*/
 
     
 
