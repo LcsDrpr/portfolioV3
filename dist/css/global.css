@@ -221,6 +221,10 @@ a {
       content: '';
       clear: both;
       display: block; }
+    @media screen and (max-width: 700px) {
+      .body_cards > .tranche {
+        display: initial;
+        width: 90%; } }
     .body_cards > .tranche > div {
       display: flex;
       border-radius: 20px;
@@ -228,6 +232,10 @@ a {
       transition: all .4s ease;
       margin: 23px;
       box-sizing: border-box; }
+      @media screen and (max-width: 900px) {
+        .body_cards > .tranche > div {
+          margin: 0 auto;
+          margin-bottom: 20px; } }
       .body_cards > .tranche > div:hover {
         box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
         .body_cards > .tranche > div:hover .colored-column {
@@ -331,6 +339,9 @@ a {
           background: #F95C3C; }
           .who .down .birth-date:hover .svg-container svg path {
             fill: white; }
+          @media screen and (max-width: 900px) {
+            .who .down .birth-date:hover .svg-container {
+              width: 70px; } }
         .who .down .birth-date:hover .date-container {
           opacity: 1;
           width: auto; }
@@ -378,6 +389,9 @@ a {
           background: #F95C3C; }
           .who .down .location:hover .svg-container svg path {
             fill: white; }
+          @media screen and (max-width: 900px) {
+            .who .down .location:hover .svg-container {
+              width: 70px; } }
         .who .down .location:hover .city-container {
           opacity: 1;
           width: auto; }
@@ -407,6 +421,51 @@ a {
           transform: translateY(-50%);
           text-transform: uppercase;
           font-family: "robotoMedium"; }
+  @media screen and (max-width: 900px) {
+    .who {
+      height: 270px; }
+      .who .down {
+        display: initial; }
+        .who .down > div {
+          width: 90% !important;
+          margin: 0 auto; }
+          .who .down > div.birth-date {
+            margin-bottom: 10px; } }
+  @media screen and (max-width: 700px) {
+    .who {
+      width: 80%; } }
+  .who.open h2 {
+    color: black !important; }
+  .who.open .down .birth-date {
+    box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
+    .who.open .down .birth-date .svg-container {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 40px;
+      background: #F95C3C; }
+      .who.open .down .birth-date .svg-container svg path {
+        fill: white; }
+      @media screen and (max-width: 900px) {
+        .who.open .down .birth-date .svg-container {
+          width: 70px; } }
+    .who.open .down .birth-date .date-container {
+      opacity: 1;
+      width: auto; }
+  .who.open .down .location {
+    box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
+    .who.open .down .location .svg-container {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 40px;
+      background: #F95C3C; }
+      .who.open .down .location .svg-container svg path {
+        fill: white; }
+      @media screen and (max-width: 900px) {
+        .who.open .down .location .svg-container {
+          width: 70px; } }
+    .who.open .down .location .city-container {
+      opacity: 1;
+      width: auto; }
 
 .contact {
   width: calc(50% - 20px);
@@ -481,8 +540,28 @@ a {
       text-transform: lowercase; }
     .contact .infos .linkedin .linkedin-container a {
       text-transform: lowercase; }
+  @media screen and (max-width: 900px) {
+    .contact {
+      height: 270px; }
+      .contact .tel, .contact .email, .contact .linkedin {
+        margin-top: 25px !important; } }
+  @media screen and (max-width: 700px) {
+    .contact {
+      width: 80%; } }
   .contact.open .colored-column {
     width: 0; }
+  .contact.open .tel, .contact.open .email, .contact.open .linkedin {
+    box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
+    .contact.open .tel .svg-container, .contact.open .email .svg-container, .contact.open .linkedin .svg-container {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      width: 70px;
+      background: #A951ED; }
+      .contact.open .tel .svg-container svg path, .contact.open .email .svg-container svg path, .contact.open .linkedin .svg-container svg path {
+        fill: white; }
+    .contact.open .tel .tel-container, .contact.open .tel .email-container, .contact.open .tel .linkedin-container, .contact.open .email .tel-container, .contact.open .email .email-container, .contact.open .email .linkedin-container, .contact.open .linkedin .tel-container, .contact.open .linkedin .email-container, .contact.open .linkedin .linkedin-container {
+      opacity: 1;
+      width: auto; }
 
 .introduction {
   clear: both;
@@ -570,6 +649,9 @@ a {
   .skills:hover .section-content .section-right {
     width: 60%;
     opacity: 1; }
+  @media screen and (max-width: 900px) {
+    .skills {
+      max-width: 200px; } }
 
 .languages {
   min-width: 200px;
@@ -587,6 +669,9 @@ a {
     color: #FFA234; }
     .languages .infos h2:before {
       background: -webkit-linear-gradient(-45deg, #FFA234 0%, white 100%); }
+  @media screen and (max-width: 900px) {
+    .languages {
+      max-width: 200px; } }
 
 .studies {
   width: 410px;
@@ -628,12 +713,17 @@ a {
         flex: 1;
         text-align: right;
         opacity: 0;
-        width: 0;
         position: absolute;
         right: 0; }
         .studies .infos .section-content .section .section-logo img {
           height: 35px;
           width: auto; }
+  .studies.open .section .section-infos .formation p {
+    font-size: 14px !important;
+    font-family: "robotoMedium" !important; }
+  .studies.open .section-logo {
+    width: auto !important;
+    opacity: 1 !important; }
 
 .experiences {
   width: 410px;
@@ -675,12 +765,17 @@ a {
         flex: 1;
         text-align: right;
         opacity: 0;
-        width: 0;
         position: absolute;
         right: 0; }
         .experiences .infos .section-content .section .section-logo img {
           height: 35px;
           width: auto; }
+  .experiences.open .section .section-infos .job p {
+    font-size: 14px !important;
+    font-family: "robotoMedium" !important; }
+  .experiences.open .section-logo {
+    width: auto !important;
+    opacity: 1 !important; }
 
 .tranchefive .hobbies {
   width: 100%;

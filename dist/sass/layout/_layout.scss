@@ -35,6 +35,10 @@ a{
             clear:both;
             display:block;
         }
+        @media screen and (max-width: 700px) {
+            display:initial;
+            width:90%;
+        }
         >div{
             display:flex;
             border-radius:20px;
@@ -42,7 +46,10 @@ a{
             @include transition-standard;
             margin:23px;
             box-sizing: border-box;
-
+            @media screen and (max-width: 900px) {
+                margin:0 auto;
+                margin-bottom:20px;
+            }
             &:hover{
                 @include shadow-hover;
                 .colored-column{

@@ -5,6 +5,8 @@ $('document').ready(function() {
     $('.body_cards .tranche>div').on('click',function(){
         console.log('zbrah');
         $(this).toggleClass('open');
+        $(this).closest('.tranche').siblings().find('>div').removeClass('open');
+        $(this).siblings().removeClass('open');
         
     });
 

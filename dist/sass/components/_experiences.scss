@@ -58,7 +58,7 @@
                     flex:1;
                     text-align:right;
                     opacity:0;
-                    width:0;
+                    //width:0;
                     //@include transition-standard;
                     position:absolute;
                     right:0;
@@ -68,6 +68,20 @@
                     }
                 }
             }
+        }
+    }
+    &.open{
+        .section .section-infos{
+            .job{
+                p{
+                    font-size:14px!important;
+                    font-family:$robotoMedium!important;
+                }
+            }
+        }
+        .section-logo{
+            width:auto!important;
+            opacity:1!important;
         }
     }
 }

@@ -96,10 +96,34 @@
             }
         }
     }
-
+    @media screen and (max-width: 900px) {
+        height:270px;
+        .tel,.email,.linkedin{
+            margin-top:25px!important;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        width:80%;
+    }
     &.open{
         .colored-column{
             width:0;
+        }
+        .tel,.email,.linkedin{
+            @include shadow-hover;
+            .svg-container{
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                width:70px;
+                background:$color-purple-primary;
+                svg path{
+                    fill:$color-white;
+                }
+            }
+            .tel-container,.email-container,.linkedin-container{
+                opacity:1;
+                width:auto;
+            }
         }
     }
 }
