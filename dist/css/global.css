@@ -70,11 +70,21 @@ body {
   transform: translateX(-50%) translateY(-50%);
   display: flex;
   justify-content: space-around; }
+  @media screen and (max-width: 850px) {
+    .helloworld-container {
+      width: 90%; } }
+  @media screen and (max-width: 700px) {
+    .helloworld-container {
+      display: initial; } }
   .helloworld-container .part1, .helloworld-container .part2 {
     text-align: center;
     width: 350px;
     margin: 20px; }
+    @media screen and (max-width: 700px) {
+      .helloworld-container .part1, .helloworld-container .part2 {
+        margin: 0 auto; } }
   .helloworld-container .part2 {
+    margin-top: 40px;
     position: relative; }
     .helloworld-container .part2 .world {
       position: absolute;
@@ -116,6 +126,9 @@ h1 {
   font-size: 96px;
   margin: 0;
   font-family: "robotoLight"; }
+  @media screen and (max-width: 850px) {
+    h1 {
+      font-size: 80px; } }
 
 @keyframes show {
   0% {
