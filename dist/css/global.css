@@ -221,7 +221,7 @@ a {
       content: '';
       clear: both;
       display: block; }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 850px) {
       .body_cards > .tranche {
         display: initial;
         width: 90%; } }
@@ -433,7 +433,7 @@ a {
             margin-bottom: 10px; } }
   @media screen and (max-width: 700px) {
     .who {
-      width: 80%; } }
+      width: 90%; } }
   .who.open h2 {
     color: black !important; }
   .who.open .down .birth-date {
@@ -471,7 +471,11 @@ a {
   width: calc(50% - 20px);
   height: 204px;
   opacity: 0;
-  display: none; }
+  display: none;
+  /*@media screen and (max-width: 850px) {
+        //display:block!important;
+        width:90%;
+    }*/ }
   .contact:hover .colored-column {
     width: 0; }
   .contact .colored-column {
@@ -547,7 +551,7 @@ a {
         margin-top: 25px !important; } }
   @media screen and (max-width: 700px) {
     .contact {
-      width: 80%; } }
+      width: 90%; } }
   .contact.open .colored-column {
     width: 0; }
   .contact.open .tel, .contact.open .email, .contact.open .linkedin {
@@ -576,6 +580,9 @@ a {
   background-size: 200% 100%; }
   .introduction:hover {
     background-position: 100% 0; }
+  @media screen and (max-width: 850px) {
+    .introduction {
+      width: 90%; } }
 
 .projects {
   width: 404px;
@@ -587,6 +594,10 @@ a {
   background-size: 200% 100%; }
   .projects:hover {
     background-position: 100% 0; }
+  @media screen and (max-width: 850px) {
+    .projects {
+      display: block !important;
+      width: 90%; } }
 
 .skills {
   opacity: 0;
@@ -652,6 +663,19 @@ a {
   @media screen and (max-width: 900px) {
     .skills {
       max-width: 200px; } }
+  @media screen and (max-width: 850px) {
+    .skills {
+      display: inline-block !important;
+      vertical-align: top; }
+      .skills .colored-column {
+        float: left; }
+      .skills .infos {
+        float: left;
+        flex: none; }
+        .skills .infos:hover .section-left {
+          margin-right: 20px; }
+          .skills .infos:hover .section-left:after {
+            right: -20px; } }
 
 .languages {
   min-width: 200px;
@@ -672,6 +696,15 @@ a {
   @media screen and (max-width: 900px) {
     .languages {
       max-width: 200px; } }
+  @media screen and (max-width: 850px) {
+    .languages {
+      display: inline-block !important;
+      vertical-align: top; }
+      .languages .colored-column {
+        float: left; }
+      .languages .infos {
+        float: left;
+        flex: none; } }
 
 .studies {
   width: 410px;
@@ -724,6 +757,9 @@ a {
   .studies.open .section-logo {
     width: auto !important;
     opacity: 1 !important; }
+  @media screen and (max-width: 700px) {
+    .studies {
+      width: 90%; } }
 
 .experiences {
   width: 410px;
@@ -776,6 +812,9 @@ a {
   .experiences.open .section-logo {
     width: auto !important;
     opacity: 1 !important; }
+  @media screen and (max-width: 700px) {
+    .experiences {
+      width: 90%; } }
 
 .tranchefive .hobbies {
   width: 100%;
