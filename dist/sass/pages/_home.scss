@@ -73,8 +73,11 @@ body{
         }
     }
     .part2{
-        margin-top:40px;
+        //margin-top:40px;
         position:relative;
+        @media screen and (max-width: 700px) {
+            margin-top:40px;
+        }
         .world{
             position:absolute;
             top:50%;

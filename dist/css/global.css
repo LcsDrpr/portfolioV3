@@ -84,8 +84,10 @@ body {
       .helloworld-container .part1, .helloworld-container .part2 {
         margin: 0 auto; } }
   .helloworld-container .part2 {
-    margin-top: 40px;
     position: relative; }
+    @media screen and (max-width: 700px) {
+      .helloworld-container .part2 {
+        margin-top: 40px; } }
     .helloworld-container .part2 .world {
       position: absolute;
       top: 50%;
