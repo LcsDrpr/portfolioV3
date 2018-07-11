@@ -248,7 +248,9 @@ a {
       @media screen and (max-width: 900px) {
         .body_cards > .tranche > div {
           margin: 0 auto;
-          margin-bottom: 20px; } }
+          margin-bottom: 20px; }
+          .body_cards > .tranche > div.languages {
+            margin-left: calc((100% - 400px) / 2); } }
       .body_cards > .tranche > div:hover {
         box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
         .body_cards > .tranche > div:hover .colored-column {
@@ -322,11 +324,31 @@ a {
     display: flex;
     justify-content: space-between;
     height: calc(100% - 50px); }
+    @media screen and (max-width: 900px) {
+      .who .up {
+        width: 90%;
+        margin: 0 auto; } }
     .who .up .profil-pic {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       border-radius: 100%;
-      background: red; }
+      background: red;
+      overflow: hidden;
+      position: relative; }
+      .who .up .profil-pic:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 100%;
+        background: rgba(249, 92, 60, 0.59);
+        z-index: 2; }
+      .who .up .profil-pic img {
+        position: absolute;
+        top: -10;
+        left: -12;
+        width: 114px; }
     .who .up .name {
       width: 150px; }
       .who .up .name h2 {
@@ -695,7 +717,10 @@ a {
   height: 280px;
   opacity: 0;
   display: none;
-  display: flex; }
+  display: flex;
+  /*@media screen and (max-width: 900px){
+        margin-left: calc((100% - 400px) / 2);
+    }*/ }
   .languages .colored-column {
     width: 60px;
     background-color: #FFA234; }
@@ -836,6 +861,9 @@ a {
   display: flex;
   justify-content: space-around;
   box-shadow: none !important; }
+  @media screen and (max-width: 900px) {
+    .tranchefive .hobbies {
+      width: 90%; } }
   .tranchefive .hobbies .music, .tranchefive .hobbies .videogames, .tranchefive .hobbies .impro {
     width: 146px;
     height: 146px;
@@ -844,6 +872,10 @@ a {
     background: white;
     position: relative;
     transition: all .4s ease; }
+    @media screen and (max-width: 900px) {
+      .tranchefive .hobbies .music, .tranchefive .hobbies .videogames, .tranchefive .hobbies .impro {
+        height: 130px;
+        width: 130px; } }
     .tranchefive .hobbies .music svg, .tranchefive .hobbies .videogames svg, .tranchefive .hobbies .impro svg {
       position: absolute;
       top: 50%;

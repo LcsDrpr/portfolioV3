@@ -4,6 +4,9 @@
     display:flex;
     justify-content: space-around;
     box-shadow: none!important;
+    @media screen and (max-width: 900px){
+        width:90%;
+    }
     .music,.videogames,.impro{
         width:146px;
         height:146px;
@@ -12,7 +15,10 @@
         background:$color-white;
         position:relative;
         @include transition-standard;
-
+        @media screen and (max-width: 900px){
+            height:130px;
+            width:130px;
+        }
         svg{
             position: absolute;
             top: 50%;

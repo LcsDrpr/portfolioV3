@@ -3,6 +3,9 @@
     height:280px;
     @include start-state;
     display:flex;
+    /*@media screen and (max-width: 900px){
+        margin-left: calc((100% - 400px) / 2);
+    }*/
     .colored-column{
         width:60px;
         background-color: $color-orange;

@@ -14,11 +14,33 @@
         display:flex;
         justify-content: space-between;
         height:calc(100% - 50px);
+        @media screen and (max-width: 900px){
+            width:90%;
+            margin:0 auto;
+        }
         .profil-pic{
-            width:80px;
-            height:80px;
+            width:90px;
+            height:90px;
             border-radius: 100%;
             background:red;
+            overflow:hidden;
+            position:relative;
+            &:before{
+                content:'';
+                display:block;
+                position:absolute;
+                width:90px;
+                height:90px;
+                border-radius: 100%;
+                background:rgba(249,92,60,0.59);
+                z-index:2;
+            }
+            img{
+                position:absolute;
+                top: -10;
+                left: -12;
+                width: 114px;
+            }
         }
         .name{
             width:150px;
