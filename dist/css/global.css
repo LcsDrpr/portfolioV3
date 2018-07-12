@@ -250,9 +250,10 @@ a {
       @media screen and (max-width: 900px) {
         .body_cards > .tranche > div {
           margin: 0 auto;
-          margin-bottom: 20px; }
-          .body_cards > .tranche > div.languages {
-            margin-left: calc((100% - 400px) / 2); } }
+          margin-bottom: 20px; } }
+      @media screen and (max-width: 850px) {
+        .body_cards > .tranche > div.languages {
+          margin-left: calc((100% - 400px) / 2); } }
       .body_cards > .tranche > div:hover {
         box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
         .body_cards > .tranche > div:hover .colored-column {
@@ -334,7 +335,6 @@ a {
       width: 90px;
       height: 90px;
       border-radius: 100%;
-      background: red;
       overflow: hidden;
       position: relative; }
       .who .up .profil-pic:before {
@@ -344,7 +344,7 @@ a {
         width: 90px;
         height: 90px;
         border-radius: 100%;
-        background: rgba(249, 92, 60, 0.59);
+        background: rgba(249, 92, 60, 0.45);
         z-index: 2; }
       .who .up .profil-pic img {
         position: absolute;
@@ -605,21 +605,49 @@ a {
       width: auto; }
 
 .introduction {
+  text-align: center;
   clear: both;
   height: 150px;
   opacity: 0;
   display: none;
   transition: all .4s ease;
   width: 100%;
-  display: block;
+  display: block !important;
   padding: 15px 35px 15px 35px;
   background: linear-gradient(-42deg, #02ccba 0%, #aa7ecd 28%, #aa7ecd 60%, #02ccba 100%);
-  background-size: 200% 100%; }
+  background-size: 200% 100%;
+  position: relative; }
   .introduction:hover {
     background-position: 100% 0; }
-  @media screen and (max-width: 850px) {
+  .introduction .introduction-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    transition: all .2s;
+    text-align: center; }
+    @media screen and (max-width: 800px) {
+      .introduction .introduction-content {
+        top: initial;
+        transform: none;
+        left: initial; }
+        .introduction .introduction-content > span {
+          display: none; } }
+    .introduction .introduction-content > * {
+      display: inline-block;
+      color: white;
+      font-size: 16px;
+      font-family: "robotoRegular";
+      margin-left: 10px;
+      margin-right: 10px;
+      transition: all .2s; }
+      @media screen and (max-width: 800px) {
+        .introduction .introduction-content > * {
+          display: block; } }
+  @media screen and (max-width: 800px) {
     .introduction {
-      width: 90%; } }
+      width: 90%;
+      height: auto; } }
 
 .projects {
   width: 404px;
@@ -782,6 +810,9 @@ a {
         font-size: 16px;
         font-family: "robotoRegular";
         color: #02B3E4; }
+        @media screen and (max-width: 350px) {
+          .studies .infos .section-content .section .section-infos .formation p {
+            font-size: 14px; } }
       .studies .infos .section-content .section .section-logo {
         flex: 1;
         text-align: right;
@@ -837,6 +868,9 @@ a {
         font-size: 16px;
         font-family: "robotoRegular";
         color: #7D97AD; }
+        @media screen and (max-width: 350px) {
+          .experiences .infos .section-content .section .section-infos .job p {
+            font-size: 14px; } }
       .experiences .infos .section-content .section .section-logo {
         flex: 1;
         text-align: right;
