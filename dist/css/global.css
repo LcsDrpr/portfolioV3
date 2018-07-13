@@ -293,7 +293,6 @@ a {
             width: 100% !important;
             opacity: 1 !important; }
       .body_cards > .tranche > div .infos {
-        width: 140px;
         padding: 15px 20px 15px 20px;
         text-align: left;
         flex: 1;
@@ -490,6 +489,12 @@ a {
   @media screen and (max-width: 700px) {
     .who {
       width: 90%; } }
+  @media screen and (max-width: 350px) {
+    .who {
+      height: 330px; }
+      .who .up {
+        flex-direction: column;
+        align-items: center; } }
   .who.open h2 {
     color: black !important; }
   .who.open .up .profil-pic:before {
@@ -628,7 +633,6 @@ a {
 .introduction {
   text-align: center;
   clear: both;
-  height: 150px;
   opacity: 0;
   display: none;
   transition: all .4s ease;
@@ -695,7 +699,8 @@ a {
   height: 280px;
   margin-left: 3%;
   display: flex;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .skills:after {
     content: '';
     background: url("../img/arrow-icon.svg") no-repeat;
@@ -715,41 +720,71 @@ a {
     .skills .colored-column svg {
       width: 43px;
       height: 43px; }
-  .skills .infos h2 {
-    color: #02CCBA; }
-    .skills .infos h2:before {
-      background: -webkit-linear-gradient(-45deg, #02CCBA 0%, white 100%); }
-  .skills .infos .section-content {
-    display: flex; }
-    .skills .infos .section-content .section-left {
-      position: relative;
-      width: 70%;
-      transition: all .4s ease; }
-      .skills .infos .section-content .section-left:after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 8%;
-        height: 70%;
-        width: 3px;
-        background: #D8D8D8; }
-      .skills .infos .section-content .section-left > div {
-        margin-top: 15px; }
-    .skills .infos .section-content .section-right {
-      background: blue;
-      width: 0%;
-      height: 100%;
-      opacity: 0;
-      transition: all .4s ease; }
+  .skills .infos {
+    transition: all .4s ease;
+    overflow: hidden; }
+    .skills .infos h2 {
+      color: #02CCBA; }
+      .skills .infos h2:before {
+        background: -webkit-linear-gradient(-45deg, #02CCBA 0%, white 100%); }
+    .skills .infos .section-content {
+      display: flex; }
+      .skills .infos .section-content .section-left {
+        position: relative;
+        width: 70%;
+        transition: all .4s ease; }
+        .skills .infos .section-content .section-left:after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 8%;
+          height: 70%;
+          width: 3px;
+          background: #D8D8D8; }
+        .skills .infos .section-content .section-left > div {
+          margin-top: 15px; }
+      .skills .infos .section-content .section-right {
+        width: 0%;
+        height: 100%;
+        opacity: 0;
+        transition: all .4s ease;
+        text-align: center; }
+        .skills .infos .section-content .section-right > * {
+          margin-top: 20px; }
+        .skills .infos .section-content .section-right .part1 > *, .skills .infos .section-content .section-right .part3 > * {
+          width: 45%;
+          display: inline-block; }
+        .skills .infos .section-content .section-right svg {
+          transition: all .4s ease;
+          width: 0;
+          height: 25px; }
   .skills:hover:after {
     opacity: 0; }
+  .skills:hover .infos {
+    width: auto !important; }
+    .skills:hover .infos:after {
+      right: 10%; }
+  .skills:hover .section-content .section-left {
+    width: 40%; }
   .skills:hover .section-content .section-right {
     width: 60%;
     opacity: 1; }
-  @media screen and (max-width: 900px) {
-    .skills {
-      max-width: 200px; } }
+    .skills:hover .section-content .section-right svg {
+      width: auto; }
+  .skills.open:after {
+    opacity: 0; }
+  .skills.open .infos {
+    width: auto !important; }
+    .skills.open .infos:after {
+      right: 10%; }
+  .skills.open .section-content .section-left {
+    width: 40%; }
+  .skills.open .section-content .section-right {
+    width: 60%;
+    opacity: 1; }
+    .skills.open .section-content .section-right svg {
+      width: auto; }
   @media screen and (max-width: 850px) {
     .skills {
       display: inline-block !important;
@@ -788,9 +823,6 @@ a {
       background: -webkit-linear-gradient(-45deg, #FFA234 0%, white 100%); }
   .languages .infos .section-content .section-left > * {
     margin-top: 15px; }
-  @media screen and (max-width: 900px) {
-    .languages {
-      max-width: 200px; } }
   @media screen and (max-width: 850px) {
     .languages {
       display: inline-block !important;

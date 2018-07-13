@@ -11,7 +11,7 @@ $('document').ready(function() {
     });
 
 
-    console.log(window.location.pathname);
+    //console.log(window.location.pathname);
     var adress = "/curriculum";
     var home = "/";
 
@@ -21,11 +21,11 @@ $('document').ready(function() {
     //setTimeout(Redirect(), 5000);
    
     //if($('body').hasClass('ireland')){
-    /*if(window.location.pathname != '/curriculum'){
+    if(window.location.pathname != '/curriculum'){
         setTimeout(redirect, 5000);
     }else{
         clearTimeout(redirect);
-    }*/
+    }
 
     
 

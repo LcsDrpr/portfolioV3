@@ -6,6 +6,7 @@
     margin-left:3%;
     display:flex;
     position:relative;
+    overflow:hidden;
     &:after{
         content:'';
         background:url('../img/arrow-icon.svg') no-repeat;
@@ -29,6 +30,8 @@
         }
     }
     .infos{
+        @include transition-standard;
+        overflow:hidden;
         h2{
             color:$color-blue-green-primary;
             &:before{
@@ -57,11 +60,27 @@
                 }
             }
             .section-right{
-                background:blue;
+                //background:blue;
                 width:0%;
                 height:100%;
                 opacity:0;
                 @include transition-standard;
+                text-align: center;
+                &>*{
+                    margin-top:20px;
+                }
+                .part1,.part3{
+                    >*{
+                        width:45%;
+                        display:inline-block;
+                    }
+                }
+                svg{
+                    @include transition-standard;
+                    width:0;
+                    height: 25px;
+                    //width: auto;
+                }
             }
         }
     }
@@ -70,19 +89,52 @@
         &:after{
             opacity:0;
         }
+        .infos{
+            width:auto!important;
+            &:after{
+                right:10%;
+            }
+        }
         .section-content{
             .section-left{
-                //width:40%;
+                width:40%;
             }
             .section-right{
                 width:60%;
                 opacity:1;
+                svg{
+                    width:auto;
+                }
+            }
+
+        }
+    }
+    &.open{
+        &:after{
+            opacity:0;
+        }
+        .infos{
+            width:auto!important;
+            &:after{
+                right:10%;
+            }
+        }
+        .section-content{
+            .section-left{
+                width:40%;
+            }
+            .section-right{
+                width:60%;
+                opacity:1;
+                svg{
+                    width:auto;
+                }
             }
 
         }
     }
     @media screen and (max-width: 900px) {
-        max-width:200px;
+        //max-width:200px;
     }
     @media screen and (max-width: 850px) {
         display:inline-block!important;
