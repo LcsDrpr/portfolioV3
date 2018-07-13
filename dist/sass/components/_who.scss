@@ -8,6 +8,13 @@
         h2{
             color:$color-black!important;
         }
+        .up{
+            .profil-pic{
+                &:before{
+                    background:rgba(249,92,60,0);
+                }
+            }
+        }
     }
     .up{
         width:100%;
@@ -34,6 +41,7 @@
                 border-radius: 100%;
                 background:rgba(249,92,60,0.45);
                 z-index:2;
+                transition:all .2s;
             }
             img{
                 position:absolute;
@@ -198,6 +206,13 @@
     &.open{
         h2{
             color:$color-black!important;
+        }
+        .up{
+            .profil-pic{
+                &:before{
+                    background:rgba(249,92,60,0);
+                }
+            }
         }
         .down{
             .birth-date{

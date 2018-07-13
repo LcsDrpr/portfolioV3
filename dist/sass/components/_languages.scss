@@ -1,5 +1,5 @@
 .languages{
-    min-width:200px;
+    min-width:215px;
     height:280px;
     @include start-state;
     display:flex;
@@ -19,6 +19,12 @@
             color:$color-orange;
             &:before{
                 background: -webkit-linear-gradient(-45deg, $color-orange 0%,$color-white 100%);
+            }
+        }
+
+        .section-content{
+            .section-left >*{
+                margin-top:15px;
             }
         }
     }

@@ -240,6 +240,9 @@ a {
       .body_cards > .tranche {
         display: initial;
         width: 90%; } }
+    @media screen and (max-width: 800px) {
+      .body_cards > .tranche.tranchetwo {
+        width: 95%; } }
     .body_cards > .tranche > div {
       display: flex;
       border-radius: 20px;
@@ -247,6 +250,14 @@ a {
       transition: all .4s ease;
       margin: 23px;
       box-sizing: border-box; }
+      .body_cards > .tranche > div.introduction {
+        box-shadow: none; }
+        @media screen and (max-width: 800px) {
+          .body_cards > .tranche > div.introduction {
+            align-items: center;
+            justify-content: space-around; } }
+        .body_cards > .tranche > div.introduction:hover {
+          box-shadow: none; }
       @media screen and (max-width: 900px) {
         .body_cards > .tranche > div {
           margin: 0 auto;
@@ -254,6 +265,9 @@ a {
       @media screen and (max-width: 850px) {
         .body_cards > .tranche > div.languages {
           margin-left: calc((100% - 400px) / 2); } }
+      @media screen and (max-width: 512px) {
+        .body_cards > .tranche > div.languages {
+          margin-left: 0; } }
       .body_cards > .tranche > div:hover {
         box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
         .body_cards > .tranche > div:hover .colored-column {
@@ -267,6 +281,8 @@ a {
             opacity: 1 !important; }
       .body_cards > .tranche > div.open {
         box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
+        .body_cards > .tranche > div.open.introduction {
+          box-shadow: none; }
         .body_cards > .tranche > div.open .colored-column {
           width: 0; }
           .body_cards > .tranche > div.open .colored-column svg {
@@ -322,6 +338,8 @@ a {
   flex-direction: column; }
   .who:hover h2 {
     color: black !important; }
+  .who:hover .up .profil-pic:before {
+    background: rgba(249, 92, 60, 0); }
   .who .up {
     width: 100%;
     display: flex;
@@ -345,7 +363,8 @@ a {
         height: 90px;
         border-radius: 100%;
         background: rgba(249, 92, 60, 0.45);
-        z-index: 2; }
+        z-index: 2;
+        transition: all .2s; }
       .who .up .profil-pic img {
         position: absolute;
         top: -10;
@@ -473,6 +492,8 @@ a {
       width: 90%; } }
   .who.open h2 {
     color: black !important; }
+  .who.open .up .profil-pic:before {
+    background: rgba(249, 92, 60, 0); }
   .who.open .down .birth-date {
     box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
     .who.open .down .birth-date .svg-container {
@@ -612,9 +633,7 @@ a {
   display: none;
   transition: all .4s ease;
   width: 100%;
-  display: block !important;
   padding: 15px 35px 15px 35px;
-  background: linear-gradient(-42deg, #02ccba 0%, #aa7ecd 28%, #aa7ecd 60%, #02ccba 100%);
   background-size: 200% 100%;
   position: relative; }
   .introduction:hover {
@@ -640,10 +659,15 @@ a {
       font-family: "robotoRegular";
       margin-left: 10px;
       margin-right: 10px;
-      transition: all .2s; }
+      transition: all .2s;
+      color: #ff5483;
+      /*@media screen and (max-width: 500px) {
+                font-size:20px;
+            }*/ }
       @media screen and (max-width: 800px) {
         .introduction .introduction-content > * {
-          display: block; } }
+          display: block;
+          font-size: 20px; } }
   @media screen and (max-width: 800px) {
     .introduction {
       width: 90%;
@@ -667,7 +691,7 @@ a {
 .skills {
   opacity: 0;
   display: none;
-  min-width: 200px;
+  min-width: 230px;
   height: 280px;
   margin-left: 3%;
   display: flex;
@@ -680,7 +704,7 @@ a {
     width: 14px;
     clear: both;
     display: block;
-    right: 12px;
+    right: 20px;
     top: 50%;
     opacity: 1;
     transition: all .4s ease; }
@@ -699,7 +723,7 @@ a {
     display: flex; }
     .skills .infos .section-content .section-left {
       position: relative;
-      width: 80%;
+      width: 70%;
       transition: all .4s ease; }
       .skills .infos .section-content .section-left:after {
         content: '';
@@ -720,8 +744,6 @@ a {
       transition: all .4s ease; }
   .skills:hover:after {
     opacity: 0; }
-  .skills:hover .section-content .section-left {
-    width: 40%; }
   .skills:hover .section-content .section-right {
     width: 60%;
     opacity: 1; }
@@ -737,13 +759,16 @@ a {
       .skills .infos {
         float: left;
         flex: none; }
-        .skills .infos:hover .section-left {
-          margin-right: 20px; }
-          .skills .infos:hover .section-left:after {
-            right: -20px; } }
+        .skills .infos:hover {
+          /*.section-left{
+                margin-right: 20px;
+                &:after{
+                    right:-20px;
+                }
+            }*/ } }
 
 .languages {
-  min-width: 200px;
+  min-width: 215px;
   height: 280px;
   opacity: 0;
   display: none;
@@ -761,6 +786,8 @@ a {
     color: #FFA234; }
     .languages .infos h2:before {
       background: -webkit-linear-gradient(-45deg, #FFA234 0%, white 100%); }
+  .languages .infos .section-content .section-left > * {
+    margin-top: 15px; }
   @media screen and (max-width: 900px) {
     .languages {
       max-width: 200px; } }
@@ -900,6 +927,10 @@ a {
   @media screen and (max-width: 900px) {
     .tranchefive .hobbies {
       width: 90%; } }
+  @media screen and (max-width: 500px) {
+    .tranchefive .hobbies {
+      flex-direction: column;
+      align-items: center; } }
   .tranchefive .hobbies .music, .tranchefive .hobbies .videogames, .tranchefive .hobbies .impro {
     width: 146px;
     height: 146px;
@@ -912,6 +943,9 @@ a {
       .tranchefive .hobbies .music, .tranchefive .hobbies .videogames, .tranchefive .hobbies .impro {
         height: 130px;
         width: 130px; } }
+    @media screen and (max-width: 500px) {
+      .tranchefive .hobbies .music, .tranchefive .hobbies .videogames, .tranchefive .hobbies .impro {
+        margin-bottom: 20px; } }
     .tranchefive .hobbies .music svg, .tranchefive .hobbies .videogames svg, .tranchefive .hobbies .impro svg {
       position: absolute;
       top: 50%;

@@ -39,6 +39,11 @@ a{
             display:initial;
             width:90%;
         }
+        @media screen and (max-width: 800px) {
+            &.tranchetwo{
+                width:95%;
+            }
+        }
         >div{
             display:flex;
             border-radius:20px;
@@ -46,6 +51,16 @@ a{
             @include transition-standard;
             margin:23px;
             box-sizing: border-box;
+            &.introduction{
+                box-shadow:none;
+                @media screen and (max-width: 800px) {
+                    align-items: center;
+                    justify-content: space-around;
+                }
+                &:hover{
+                    box-shadow:none;
+                }
+            }
             @media screen and (max-width: 900px) {
                 margin:0 auto;
                 margin-bottom:20px;
@@ -54,6 +69,11 @@ a{
                 &.languages{
                     margin-left: calc((100% - 400px) / 2);
                 }
+            }
+            @media screen and (max-width: 512px) {
+                &.languages{
+                    margin-left: 0;
+                } 
             }
 
             &:hover{
@@ -75,6 +95,9 @@ a{
             }
             &.open{
                 @include shadow-hover;
+                &.introduction{
+                    box-shadow:none;
+                }
                 .colored-column{
                     width:0;
 

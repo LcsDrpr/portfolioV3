@@ -1,7 +1,7 @@
 .skills{
     //float:left;
     @include start-state;
-    min-width:200px;
+    min-width:230px;
     height:280px;
     margin-left:3%;
     display:flex;
@@ -14,7 +14,7 @@
         width:14px;
         clear:both;
         display:block;
-        right:12px;
+        right:20px;
         top:50%;
         opacity:1;
         @include transition-standard;
@@ -39,7 +39,7 @@
             display:flex;
             .section-left{
                 position:relative;
-                width:80%;
+                width:70%;
                 @include transition-standard;
                 &:after{
                     content:'';
@@ -72,7 +72,7 @@
         }
         .section-content{
             .section-left{
-                width:40%;
+                //width:40%;
             }
             .section-right{
                 width:60%;
@@ -90,16 +90,24 @@
         .colored-column{
             float:left;
         }
+        &:hover{
+            .section-left{
+                //margin-right: 20px;
+                &:after{
+                    //right:-20px;
+                }
+            }
+        }
         .infos{
            float:left;
            flex:none; 
            &:hover{
-            .section-left{
+            /*.section-left{
                 margin-right: 20px;
                 &:after{
                     right:-20px;
                 }
-            }
+            }*/
            }
 
         }

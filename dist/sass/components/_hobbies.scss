@@ -7,6 +7,10 @@
     @media screen and (max-width: 900px){
         width:90%;
     }
+    @media screen and (max-width: 500px){
+        flex-direction: column;
+        align-items: center;
+    }
     .music,.videogames,.impro{
         width:146px;
         height:146px;
@@ -19,6 +23,10 @@
             height:130px;
             width:130px;
         }
+        @media screen and (max-width: 500px){
+            margin-bottom:20px;
+        }
+
         svg{
             position: absolute;
             top: 50%;
