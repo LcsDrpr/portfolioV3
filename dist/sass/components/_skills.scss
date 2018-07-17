@@ -90,7 +90,7 @@
             opacity:0;
         }
         .infos{
-            width:auto!important;
+            //width:auto!important;
             &:after{
                 right:10%;
             }
@@ -164,6 +164,9 @@
 
         }
 
+    }
+    @media screen and (max-width:500px) {
+        //width: 50%;
     }
 
 }

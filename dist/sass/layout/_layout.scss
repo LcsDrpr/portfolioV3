@@ -51,6 +51,11 @@ a{
             @include transition-standard;
             margin:23px;
             box-sizing: border-box;
+            &:not(.languages):hover{
+                .infos{
+                    padding-left:20px;
+                }
+            }
             &.introduction{
                 box-shadow:none;
                 @media screen and (max-width: 800px) {
@@ -67,16 +72,16 @@ a{
             }
             @media screen and (max-width: 850px) {
                 &.languages{
-                    margin-left: calc((100% - 400px) / 2);
+                    margin-left: calc((100% - 460px) / 2);
                 }
             }
-            @media screen and (max-width: 512px) {
+            @media screen and (max-width: 480px) {
                 &.languages{
-                    margin-left: 0;
+                    margin-left: 0px;
                 } 
             }
 
-            &:hover{
+            &:not(.languages):hover, &:not(.introduction):hover{
                 @include shadow-hover;
                 .colored-column{
                     width:0;
@@ -115,7 +120,7 @@ a{
             }
             .infos{
                 //width:140px;
-                padding:15px 20px 15px 20px;
+                padding:15px 20px 15px 10px;
                 text-align:left;
                 flex:1;
                 @include transition-standard;

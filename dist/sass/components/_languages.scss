@@ -1,5 +1,5 @@
 .languages{
-    min-width:215px;
+    min-width:230px;
     height:280px;
     @include start-state;
     display:flex;
@@ -25,6 +25,10 @@
         .section-content{
             .section-left >*{
                 margin-top:15px;
+                &.japanese svg{
+                    border-radius:100%;
+                    @include shadow-hover;
+                }
             }
         }
     }
@@ -42,4 +46,8 @@
             flex:none; 
          }
     }
+    /*@media screen and (max-width:500px) {
+        //width: 50%;
+        margin-left:0;
+    }*/
 }
