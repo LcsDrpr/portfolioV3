@@ -25,6 +25,7 @@
         .section-content{
             .section-left >*{
                 margin-top:15px;
+                padding-left: 20px;
                 &.japanese svg{
                     border-radius:100%;
                     @include shadow-hover;

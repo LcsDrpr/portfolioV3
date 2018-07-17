@@ -267,15 +267,15 @@ a {
       @media screen and (max-width: 480px) {
         .body_cards > .tranche > div.languages {
           margin-left: 0px; } }
-      .body_cards > .tranche > div:not(.languages):hover, .body_cards > .tranche > div:not(.introduction):hover {
+      .body_cards > .tranche > div:not(.languages):hover {
         box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
-        .body_cards > .tranche > div:not(.languages):hover .colored-column, .body_cards > .tranche > div:not(.introduction):hover .colored-column {
+        .body_cards > .tranche > div:not(.languages):hover .colored-column {
           width: 0; }
-          .body_cards > .tranche > div:not(.languages):hover .colored-column svg, .body_cards > .tranche > div:not(.introduction):hover .colored-column svg {
+          .body_cards > .tranche > div:not(.languages):hover .colored-column svg {
             width: 0; }
-        .body_cards > .tranche > div:not(.languages):hover h2, .body_cards > .tranche > div:not(.introduction):hover h2 {
+        .body_cards > .tranche > div:not(.languages):hover h2 {
           color: white; }
-          .body_cards > .tranche > div:not(.languages):hover h2:before, .body_cards > .tranche > div:not(.introduction):hover h2:before {
+          .body_cards > .tranche > div:not(.languages):hover h2:before {
             width: 100% !important;
             opacity: 1 !important; }
       .body_cards > .tranche > div.open {
@@ -689,10 +689,37 @@ a {
   background-size: 200% 100%; }
   .projects:hover {
     background-position: 100% 0; }
+  .projects > .infos {
+    padding-left: 20px !important; }
+    .projects > .infos .section-title {
+      color: white; }
+    .projects > .infos .section-content {
+      padding-top: 20px;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 100%; }
+      .projects > .infos .section-content .section-right, .projects > .infos .section-content .section-left {
+        width: 45%;
+        display: flex;
+        flex-direction: column; }
+        .projects > .infos .section-content .section-right a, .projects > .infos .section-content .section-left a {
+          display: inline-block;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          width: 80%; }
+      .projects > .infos .section-content img {
+        width: 100%;
+        height: auto; }
+      .projects > .infos .section-content img.urbact, .projects > .infos .section-content img.entpe, .projects > .infos .section-content img.anact, .projects > .infos .section-content img.aphp {
+        background: white;
+        padding: 5px; }
   @media screen and (max-width: 850px) {
     .projects {
       display: block !important;
-      width: 90%; } }
+      width: 90%;
+      height: auto; } }
 
 .skills {
   opacity: 0;
@@ -826,7 +853,8 @@ a {
     .languages .infos h2:before {
       background: -webkit-linear-gradient(-45deg, #FFA234 0%, white 100%); }
   .languages .infos .section-content .section-left > * {
-    margin-top: 15px; }
+    margin-top: 15px;
+    padding-left: 20px; }
     .languages .infos .section-content .section-left > *.japanese svg {
       border-radius: 100%;
       box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
@@ -888,15 +916,26 @@ a {
         .studies .infos .section-content .section .section-logo img {
           height: 35px;
           width: auto; }
+  @media screen and (max-width: 400px) {
+    .studies.open .section .section-infos {
+      width: 58%; } }
   .studies.open .section .section-infos .formation p {
     font-size: 14px !important;
     font-family: "robotoMedium" !important; }
   .studies.open .section-logo {
     width: auto !important;
     opacity: 1 !important; }
+    @media screen and (max-width: 400px) {
+      .studies.open .section-logo img {
+        height: 30px !important; } }
   @media screen and (max-width: 700px) {
     .studies {
       width: 90%; } }
+  @media screen and (max-width: 400px) {
+    .studies:hover .section-infos {
+      width: 58%; }
+    .studies:hover .section-logo img {
+      height: 30px !important; } }
 
 .experiences {
   width: 410px;
@@ -946,15 +985,28 @@ a {
         .experiences .infos .section-content .section .section-logo img {
           height: 35px;
           width: auto; }
+  @media screen and (max-width: 400px) {
+    .experiences.open .section .section-infos {
+      width: 58%; } }
   .experiences.open .section .section-infos .job p {
     font-size: 14px !important;
     font-family: "robotoMedium" !important; }
   .experiences.open .section-logo {
     width: auto !important;
     opacity: 1 !important; }
+    @media screen and (max-width: 400px) {
+      .experiences.open .section-logo img {
+        height: 30px !important; } }
   @media screen and (max-width: 700px) {
     .experiences {
       width: 90%; } }
+  @media screen and (max-width: 400px) {
+    .experiences:hover .section-infos {
+      width: 58%; }
+      .experiences:hover .section-infos img {
+        height: 30px; }
+    .experiences:hover .section-logo img {
+      height: 30px !important; } }
 
 .tranchefive .hobbies {
   width: 100%;

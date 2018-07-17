@@ -75,6 +75,9 @@
     }
     &.open{
         .section .section-infos{
+            @media screen and (max-width: 400px) {
+                width: 58%;
+            }
             .job{
                 p{
                     font-size:14px!important;
@@ -85,9 +88,29 @@
         .section-logo{
             width:auto!important;
             opacity:1!important;
+            @media screen and (max-width: 400px) {
+                img{
+                    height:30px!important;
+                }
+            }
         }
     }
     @media screen and (max-width: 700px) {
         width:90%;
+    }
+    @media screen and (max-width: 400px) {
+        &:hover{
+            .section-infos{
+                width: 58%;
+                img{
+                    height:30px;
+                }
+            }
+            .section-logo{
+                img{
+                    height:30px!important;
+                }
+            }
+        }
     }
 }

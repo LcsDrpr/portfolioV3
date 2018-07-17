@@ -81,7 +81,7 @@ a{
                 } 
             }
 
-            &:not(.languages):hover, &:not(.introduction):hover{
+            &:not(.languages):hover{
                 @include shadow-hover;
                 .colored-column{
                     width:0;
