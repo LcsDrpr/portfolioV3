@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'rubikRegular';
   src: url("../font/Rubik/Rubik-Regular.ttf") format("truetype");
@@ -58,9 +59,6 @@
   100% {
     width: 130%;
     background: black; } }
-
-body {
-  position: relative; }
 
 .helloworld-container {
   max-width: 900px;
@@ -362,7 +360,7 @@ a {
         border-radius: 100%;
         background: rgba(249, 92, 60, 0.45);
         z-index: 2;
-        transition: all .2s; }
+        transition: all .4s ease; }
       .who .up .profil-pic img {
         position: absolute;
         top: -10;
@@ -767,10 +765,11 @@ a {
           display: block;
           position: absolute;
           right: 0;
-          top: 8%;
+          top: 10%;
           height: 70%;
           width: 3px;
-          background: #D8D8D8; }
+          background: #D8D8D8;
+          transition: all .4s ease; }
         .skills .infos .section-content .section-left > div {
           margin-top: 15px; }
       .skills .infos .section-content .section-right {
@@ -794,6 +793,8 @@ a {
     right: 10%; }
   .skills:hover .section-content .section-left {
     width: 40%; }
+    .skills:hover .section-content .section-left:after {
+      height: 85%; }
   .skills:hover .section-content .section-right {
     width: 60%;
     opacity: 1; }
@@ -807,6 +808,8 @@ a {
       right: 10%; }
   .skills.open .section-content .section-left {
     width: 40%; }
+    .skills.open .section-content .section-left:after {
+      height: 85%; }
   .skills.open .section-content .section-right {
     width: 60%;
     opacity: 1; }
@@ -1030,6 +1033,34 @@ a {
     background: white;
     position: relative;
     transition: all .4s ease; }
+    .tranchefive .hobbies .music:after, .tranchefive .hobbies .videogames:after, .tranchefive .hobbies .impro:after {
+      opacity: 0;
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: all .4s ease;
+      color: white; }
+    .tranchefive .hobbies .music:before, .tranchefive .hobbies .videogames:before, .tranchefive .hobbies .impro:before {
+      z-index: 3;
+      opacity: 0;
+      transition: all .4s ease;
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: white; }
+    .tranchefive .hobbies .music.music:before, .tranchefive .hobbies .videogames.music:before, .tranchefive .hobbies .impro.music:before {
+      content: 'Musique'; }
+    .tranchefive .hobbies .music.impro:before, .tranchefive .hobbies .videogames.impro:before, .tranchefive .hobbies .impro.impro:before {
+      content: 'Théâtre d\'impro'; }
+    .tranchefive .hobbies .music.videogames:before, .tranchefive .hobbies .videogames.videogames:before, .tranchefive .hobbies .impro.videogames:before {
+      content: 'Jeux vidéo'; }
     @media screen and (max-width: 900px) {
       .tranchefive .hobbies .music, .tranchefive .hobbies .videogames, .tranchefive .hobbies .impro {
         height: 130px;
@@ -1044,3 +1075,7 @@ a {
       left: 50%; }
     .tranchefive .hobbies .music:hover, .tranchefive .hobbies .videogames:hover, .tranchefive .hobbies .impro:hover {
       box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2); }
+      .tranchefive .hobbies .music:hover:before, .tranchefive .hobbies .videogames:hover:before, .tranchefive .hobbies .impro:hover:before {
+        opacity: 1; }
+      .tranchefive .hobbies .music:hover:after, .tranchefive .hobbies .videogames:hover:after, .tranchefive .hobbies .impro:hover:after {
+        opacity: 1; }

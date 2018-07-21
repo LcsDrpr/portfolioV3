@@ -41,7 +41,7 @@
                 border-radius: 100%;
                 background:rgba(249,92,60,0.45);
                 z-index:2;
-                transition:all .2s;
+                @include transition-standard;
             }
             img{
                 position:absolute;

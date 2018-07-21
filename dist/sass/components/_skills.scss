@@ -49,11 +49,13 @@
                     display:block;
                     position:absolute;
                     right:0;
-                    top:8%;
+                    //top:8%;
+                    top:10%;
                     //transform: translateY(-50%);
                     height:70%;
                     width:3px;
                     background:$color-gray;
+                    @include transition-standard;
                 }
                 >div{
                     margin-top:15px;
@@ -98,6 +100,9 @@
         .section-content{
             .section-left{
                 width:40%;
+                &:after{
+                    height:85%;
+                }
             }
             .section-right{
                 width:60%;
@@ -122,6 +127,9 @@
         .section-content{
             .section-left{
                 width:40%;
+                &:after{
+                    height:85%;
+                }
             }
             .section-right{
                 width:60%;
