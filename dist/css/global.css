@@ -792,7 +792,7 @@ a {
   .skills:hover .section-content .section-left {
     width: 40%; }
     .skills:hover .section-content .section-left:after {
-      height: 85%; }
+      height: 70%; }
   .skills:hover .section-content .section-right {
     width: 60%;
     opacity: 1; }
