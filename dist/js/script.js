@@ -7,9 +7,15 @@ $('document').ready(function() {
         $(this).toggleClass('open');
         $(this).closest('.tranche').siblings().find('>div').removeClass('open');
         $(this).siblings().removeClass('open');
-        
     });
 
+    $('.experiences .infos .section-content').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
 
     //console.log(window.location.pathname);
     var adress = "/curriculum";

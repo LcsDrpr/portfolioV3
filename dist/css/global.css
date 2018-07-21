@@ -245,8 +245,6 @@ a {
       transition: all .4s ease;
       margin: 23px;
       box-sizing: border-box; }
-      .body_cards > .tranche > div:not(.languages):hover .infos {
-        padding-left: 20px; }
       .body_cards > .tranche > div.introduction {
         box-shadow: none; }
         @media screen and (max-width: 800px) {
@@ -946,9 +944,15 @@ a {
   opacity: 0;
   display: none;
   display: flex; }
+  .experiences:hover .section {
+    top: 0px !important;
+    transform: none !important; }
   .experiences:hover .section .section-infos .job p {
     font-size: 14px !important;
     font-family: "robotoMedium" !important; }
+  .experiences:hover .section .section-infos .job-description {
+    opacity: 1 !important;
+    height: 100%; }
   .experiences:hover .section-logo {
     width: auto !important;
     opacity: 1 !important; }
@@ -964,36 +968,95 @@ a {
       color: #7D97AD; }
       .experiences .infos h2:before {
         background: -webkit-linear-gradient(-45deg, #7D97AD 0%, white 100%); }
-    .experiences .infos .section-content .section {
-      margin-top: 20px;
-      display: flex;
+    .experiences .infos .section-content {
       position: relative; }
-      .experiences .infos .section-content .section .section-infos .date p {
-        font-family: "robotoRegular";
-        font-size: 12px; }
-      .experiences .infos .section-content .section .section-infos .job p {
-        transition: all .4s ease;
-        font-size: 16px;
-        font-family: "robotoRegular";
-        color: #7D97AD; }
-        @media screen and (max-width: 350px) {
-          .experiences .infos .section-content .section .section-infos .job p {
-            font-size: 14px; } }
-      .experiences .infos .section-content .section .section-logo {
-        flex: 1;
-        text-align: right;
-        opacity: 0;
+      .experiences .infos .section-content button {
         position: absolute;
-        right: 0; }
-        .experiences .infos .section-content .section .section-logo img {
-          height: 35px;
-          width: auto; }
+        bottom: 0;
+        -webkit-appearance: none;
+        transform: none;
+        top: initial;
+        z-index: 3; }
+        .experiences .infos .section-content button:before {
+          content: " " !important;
+          display: block;
+          height: 100%;
+          width: 100%;
+          background-size: contain;
+          background-repeat: no-repeat; }
+        .experiences .infos .section-content button.slick-prev {
+          left: 40%; }
+          .experiences .infos .section-content button.slick-prev:before {
+            background-image: url("../img/arrow-icon-left.svg"); }
+        .experiences .infos .section-content button.slick-next {
+          right: 40%; }
+          .experiences .infos .section-content button.slick-next:before {
+            background-image: url("../img/arrow-icon.svg"); }
+      .experiences .infos .section-content .slick-dots {
+        display: none !important;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+        .experiences .infos .section-content .slick-dots li {
+          display: inline-block; }
+      .experiences .infos .section-content .slick-track {
+        position: relative;
+        height: 75%;
+        width: 100% !important; }
+        .experiences .infos .section-content .slick-track .slick-slide {
+          position: absolute !important;
+          left: 0 !important;
+          transition: all .4s ease; }
+      .experiences .infos .section-content .section {
+        margin-top: 20px;
+        display: flex !important;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .4s ease; }
+        .experiences .infos .section-content .section .section-infos .date p {
+          font-family: "robotoRegular";
+          font-size: 12px; }
+        .experiences .infos .section-content .section .section-infos .job p {
+          transition: all .4s ease;
+          font-size: 16px;
+          font-family: "robotoRegular";
+          color: #7D97AD; }
+          @media screen and (max-width: 350px) {
+            .experiences .infos .section-content .section .section-infos .job p {
+              font-size: 14px; } }
+        .experiences .infos .section-content .section .section-infos .job-description {
+          opacity: 0;
+          transition: all .4s ease;
+          height: 0; }
+          .experiences .infos .section-content .section .section-infos .job-description ul {
+            padding-left: 0; }
+            .experiences .infos .section-content .section .section-infos .job-description ul li {
+              list-style: none;
+              font-size: 12px;
+              padding-bottom: 5px; }
+        .experiences .infos .section-content .section .section-logo {
+          flex: 1;
+          text-align: right;
+          opacity: 0;
+          position: absolute;
+          right: 10px; }
+          .experiences .infos .section-content .section .section-logo img {
+            height: 35px;
+            width: auto; }
+  .experiences.open .section {
+    top: 0px !important;
+    transform: none !important; }
   @media screen and (max-width: 400px) {
     .experiences.open .section .section-infos {
       width: 58%; } }
   .experiences.open .section .section-infos .job p {
     font-size: 14px !important;
     font-family: "robotoMedium" !important; }
+  .experiences.open .section .section-infos .job-description {
+    opacity: 1 !important;
+    height: 100%; }
   .experiences.open .section-logo {
     width: auto !important;
     opacity: 1 !important; }
