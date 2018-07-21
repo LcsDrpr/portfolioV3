@@ -13,7 +13,13 @@
             transform: none!important;
         }
         .section .section-infos{
+            @media screen and (max-width: 350px) {
+                width:inherit!important;
+            }
             .job{
+                @media screen and (max-width: 400px) {
+                    width:80%;
+                }
                 p{
                     font-size:14px!important;
                     font-family:$robotoMedium!important;
@@ -63,6 +69,9 @@
                     background-size:contain;
                     background-repeat: no-repeat;
                 }
+                @media screen and (max-width: 400px){
+                    bottom: -20px;
+                }
 
                 &.slick-prev{
                     left:40%;
@@ -110,6 +119,9 @@
                 transform: translateY(-50%);
                 @include transition-standard;
                 .section-infos{
+                    @media screen and (max-width: 350px) {
+                        width:70%;
+                    }
                     .date{
                         p{
                             font-family:$robotoRegular;
@@ -117,20 +129,27 @@
                         }
                     }
                     .job{
+                        width:90%;
                         p{
                             @include transition-standard;
                             font-size: 16px;
                             font-family: $robotoRegular;
                             color:$color-blue-gray;
                             @media screen and (max-width: 350px) {
-                                font-size:14px;
+                                font-size:12px;
                             }
                         }
+
                     }
                     .job-description{
                         opacity:0;
                         @include transition-standard;
                         height:0;
+                        @media screen and (max-width: 400px){
+                            ul li{
+                                font-size:10px!important;
+                            }
+                        }
                        ul{
                            padding-left:0;
                            li{
@@ -163,10 +182,13 @@
             transform: none!important;
         }
         .section .section-infos{
-            @media screen and (max-width: 400px) {
-                width: 58%;
+            @media screen and (max-width: 350px) {
+                width:inherit!important;
             }
             .job{
+                @media screen and (max-width: 400px) {
+                    width:80%;
+                }
                 p{
                     font-size:14px!important;
                     font-family:$robotoMedium!important;
@@ -193,7 +215,7 @@
     @media screen and (max-width: 400px) {
         &:hover{
             .section-infos{
-                width: 58%;
+                //width: 58%;
                 img{
                     height:30px;
                 }

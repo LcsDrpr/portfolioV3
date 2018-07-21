@@ -245,6 +245,10 @@ a {
       transition: all .4s ease;
       margin: 23px;
       box-sizing: border-box; }
+      .body_cards > .tranche > div:not(.languages):hover .infos {
+        padding-left: 10px; }
+      .body_cards > .tranche > div.open .infos {
+        padding-left: 10px; }
       .body_cards > .tranche > div.introduction {
         box-shadow: none; }
         @media screen and (max-width: 800px) {
@@ -947,6 +951,12 @@ a {
   .experiences:hover .section {
     top: 0px !important;
     transform: none !important; }
+  @media screen and (max-width: 350px) {
+    .experiences:hover .section .section-infos {
+      width: inherit !important; } }
+  @media screen and (max-width: 400px) {
+    .experiences:hover .section .section-infos .job {
+      width: 80%; } }
   .experiences:hover .section .section-infos .job p {
     font-size: 14px !important;
     font-family: "robotoMedium" !important; }
@@ -984,6 +994,9 @@ a {
           width: 100%;
           background-size: contain;
           background-repeat: no-repeat; }
+        @media screen and (max-width: 400px) {
+          .experiences .infos .section-content button {
+            bottom: -20px; } }
         .experiences .infos .section-content button.slick-prev {
           left: 40%; }
           .experiences .infos .section-content button.slick-prev:before {
@@ -1015,21 +1028,29 @@ a {
         top: 50%;
         transform: translateY(-50%);
         transition: all .4s ease; }
+        @media screen and (max-width: 350px) {
+          .experiences .infos .section-content .section .section-infos {
+            width: 70%; } }
         .experiences .infos .section-content .section .section-infos .date p {
           font-family: "robotoRegular";
           font-size: 12px; }
-        .experiences .infos .section-content .section .section-infos .job p {
-          transition: all .4s ease;
-          font-size: 16px;
-          font-family: "robotoRegular";
-          color: #7D97AD; }
-          @media screen and (max-width: 350px) {
-            .experiences .infos .section-content .section .section-infos .job p {
-              font-size: 14px; } }
+        .experiences .infos .section-content .section .section-infos .job {
+          width: 90%; }
+          .experiences .infos .section-content .section .section-infos .job p {
+            transition: all .4s ease;
+            font-size: 16px;
+            font-family: "robotoRegular";
+            color: #7D97AD; }
+            @media screen and (max-width: 350px) {
+              .experiences .infos .section-content .section .section-infos .job p {
+                font-size: 12px; } }
         .experiences .infos .section-content .section .section-infos .job-description {
           opacity: 0;
           transition: all .4s ease;
           height: 0; }
+          @media screen and (max-width: 400px) {
+            .experiences .infos .section-content .section .section-infos .job-description ul li {
+              font-size: 10px !important; } }
           .experiences .infos .section-content .section .section-infos .job-description ul {
             padding-left: 0; }
             .experiences .infos .section-content .section .section-infos .job-description ul li {
@@ -1048,9 +1069,12 @@ a {
   .experiences.open .section {
     top: 0px !important;
     transform: none !important; }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 350px) {
     .experiences.open .section .section-infos {
-      width: 58%; } }
+      width: inherit !important; } }
+  @media screen and (max-width: 400px) {
+    .experiences.open .section .section-infos .job {
+      width: 80%; } }
   .experiences.open .section .section-infos .job p {
     font-size: 14px !important;
     font-family: "robotoMedium" !important; }
@@ -1067,10 +1091,8 @@ a {
     .experiences {
       width: 90%; } }
   @media screen and (max-width: 400px) {
-    .experiences:hover .section-infos {
-      width: 58%; }
-      .experiences:hover .section-infos img {
-        height: 30px; }
+    .experiences:hover .section-infos img {
+      height: 30px; }
     .experiences:hover .section-logo img {
       height: 30px !important; } }
 

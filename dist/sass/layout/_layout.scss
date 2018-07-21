@@ -53,8 +53,13 @@ a{
             box-sizing: border-box;
             &:not(.languages):hover{
                 .infos{
-                    //padding-left:20px;
+                    padding-left:10px;
                 }
+            }
+            &.open{
+                .infos{
+                    padding-left:10px;
+                }  
             }
             &.introduction{
                 box-shadow:none;
