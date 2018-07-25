@@ -360,7 +360,7 @@ a {
         width: 90px;
         height: 90px;
         border-radius: 100%;
-        background: rgba(249, 92, 60, 0.45);
+        background: rgba(249, 92, 60, 0.3);
         z-index: 2;
         transition: all .4s ease; }
       .who .up .profil-pic img {
@@ -1034,16 +1034,14 @@ a {
         .experiences .infos .section-content .section .section-infos .date p {
           font-family: "robotoRegular";
           font-size: 12px; }
-        .experiences .infos .section-content .section .section-infos .job {
-          width: 90%; }
-          .experiences .infos .section-content .section .section-infos .job p {
-            transition: all .4s ease;
-            font-size: 16px;
-            font-family: "robotoRegular";
-            color: #7D97AD; }
-            @media screen and (max-width: 350px) {
-              .experiences .infos .section-content .section .section-infos .job p {
-                font-size: 12px; } }
+        .experiences .infos .section-content .section .section-infos .job p {
+          transition: all .4s ease;
+          font-size: 16px;
+          font-family: "robotoRegular";
+          color: #7D97AD; }
+          @media screen and (max-width: 350px) {
+            .experiences .infos .section-content .section .section-infos .job p {
+              font-size: 12px; } }
         .experiences .infos .section-content .section .section-infos .job-description {
           opacity: 0;
           transition: all .4s ease;
