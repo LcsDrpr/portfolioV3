@@ -712,7 +712,7 @@ a {
       .projects > .infos .section-content img {
         width: 100%;
         height: auto; }
-      .projects > .infos .section-content img.urbact, .projects > .infos .section-content img.entpe, .projects > .infos .section-content img.anact, .projects > .infos .section-content img.aphp {
+      .projects > .infos .section-content img.urbact, .projects > .infos .section-content img.entpe, .projects > .infos .section-content img.emn, .projects > .infos .section-content img.aphp {
         background: white;
         padding: 5px; }
   @media screen and (max-width: 850px) {
